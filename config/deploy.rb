@@ -1,6 +1,9 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.0"
 
+server 45.55.170.122, port: 80, roles: [:web, :app, :db], primary: true
+
+
 set :application, "kaoandgao"
 set :repo_url, "https://github.com/Kaoxyooj/kaoandgao.git"
 
