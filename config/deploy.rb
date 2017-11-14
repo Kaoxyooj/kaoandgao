@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.0"
 
-server '45.55.170.122', roles: [:web, :app, :db], primary: true
+server '45.55.170.122', user: 'deploy', roles: %w{app db web}
 
 
 set :application, "kaoandgao"
