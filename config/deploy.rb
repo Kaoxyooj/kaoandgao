@@ -15,7 +15,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 set :keep_releases, 3
 
 task :get_passenger_instance_name do
-  on roles(:app) do
+  on roles(:app :db :web) do
     set :passenger_instance_name, capture(:"/FULL/PATH/TO/passenger-status || true").scan(/^(\S+)\s+nginx.*$/)[0][0]
   end
 end
