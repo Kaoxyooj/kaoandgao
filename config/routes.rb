@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   devise_for :admins
-  root to: "adminss#index"
+  root to: "admins#index"
 end
