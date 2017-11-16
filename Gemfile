@@ -7,6 +7,8 @@ end
 
 
 gem 'coffee-rails', '~> 4.2'
+gem 'devise'
+gem "haml-rails"
 gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'rails', '~> 5.1.4'
