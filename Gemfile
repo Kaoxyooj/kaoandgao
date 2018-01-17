@@ -11,6 +11,7 @@ gem 'devise'
 gem 'foundation-rails'
 gem "haml-rails"
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '~> 5.1.4'
 gem 'sass-rails'
