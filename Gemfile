@@ -1,22 +1,24 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+# git_source(:github) do |repo_name|
+#   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+#   "https://github.com/#{repo_name}.git"
+# end
 
 
-gem 'coffee-rails', '~> 4.2'
-gem 'devise'
-gem 'foundation-rails'
 gem "haml-rails"
-gem 'jbuilder', '~> 2.5'
+gem 'bootstrap'
+gem 'coffee-rails'
+gem 'high_voltage', '~> 3.0.0'
+gem 'jbuilder'
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'pg'
-gem 'rails', '~> 5.1.4'
+gem 'rails'
 gem 'sass-rails'
-gem 'turbolinks', '~> 5'
-gem 'uglifier', '>= 1.3.0'
+gem 'sprockets-rails'
+gem 'turbolinks'
+gem 'uglifier'
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'puma', '~> 3.7'
