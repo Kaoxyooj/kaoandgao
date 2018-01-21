@@ -1,5 +1,7 @@
 default: &default
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  encoding: unicode
+  pool: 5
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
@@ -13,9 +15,7 @@ test:
 
 production:
   adapter: postgresql
-  host: 127.0.0.1
-  database: my_app_name_production
+  host: 45.55.170.122
+  database: postgres
   username: deploy
-  password: YOUR_POSTGRES_PASSWORD
-  encoding: unicode
-  pool: 5
+  password: <%= Rails.application.secrets.pg_pw %>
