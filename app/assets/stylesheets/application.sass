@@ -1,10 +1,22 @@
-@import "main/*"
+@import "pages/*"
 @import "bootstrap"
 
 
 @font-face
-  font-family: Amanda
-  src: font-url('Amanda.otf') format('otf')
+  font-family: RedMist
+  font-weight: normal
+  font-style: normal
+  src: font-url('RedMist/RedMist-Regular.otf') format('opentype')
+  src: font-url('RedMist/RedMist-Regular.ttf') format('truetype')
+
+// @font-face
+//   font-family: 'Amanda'
+//   src: url('Amanda.eot')
+//   src: url('Amanda.eot?#iefix') format('embedded-opentype'), url('Amanda.woff') format('woff'), url('Amanda.ttf') format('Amanda'), url('Amanda.svg#Amanda') format('svg')
+//   font-weight: normal
+//   font-style: normal
+
+$font-family: RedMist
 
 body
-  font-family: Amanda
+  font-family: $font-family

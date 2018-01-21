@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: "story#index"
+    root to: 'pages#index', id: 'home'
 end
