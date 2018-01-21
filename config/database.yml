@@ -1,21 +1,21 @@
 default: &default
-  encoding: unicode
-  pool: 5
-  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-
-development:
-  adapter: sqlite3
-  <<: *default
-  database: db/development.sqlite3
-
-test:
-  <<: *default
-  database: db/test.sqlite3
-
-production:
   adapter: postgresql
   host: 45.55.170.122
   database: postgres
   username: deploy
   password: <%= Rails.application.secrets.pg_pw %>
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  # adapter: sqlite3
+  # database: db/development.sqlite3
+
+test:
+  <<: *default
+  # database: db/test.sqlite3
+
+production:
+  <<: *default
