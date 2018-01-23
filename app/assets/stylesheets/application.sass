@@ -1,6 +1,7 @@
 @import "pages/*"
 @import "bootstrap"
 
+$font-family: RedMist
 
 @font-face
   font-family: RedMist
@@ -8,15 +9,19 @@
   font-style: normal
   src: font-url('RedMist/RedMist-Regular.otf') format('opentype')
   src: font-url('RedMist/RedMist-Regular.ttf') format('truetype')
+  // src: url('Amanda.eot?#iefix') format('embedded-opentype'), url('Amanda.woff') format('woff'), url('Amanda.ttf') format('Amanda'), url('Amanda.svg#Amanda') format('svg')
 
-// @font-face
-//   font-family: 'Amanda'
-//   src: url('Amanda.eot')
-//   src: url('Amanda.eot?#iefix') format('embedded-opentype'), url('Amanda.woff') format('woff'), url('Amanda.ttf') format('Amanda'), url('Amanda.svg#Amanda') format('svg')
-//   font-weight: normal
-//   font-style: normal
+.black
+  color: black
 
-$font-family: RedMist
+.ring-color
+  color: #827c77
 
-body
+.redmist
   font-family: $font-family
+
+.underline
+  border-bottom: 1px solid
+
+a:hover
+  color: inherit !important
