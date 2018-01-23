@@ -1,6 +1,6 @@
-.redmist.ring-color
-  .col-12
-    %h1.text-center Kao & Gao
+.kng.redmist.ring-color
+  .text-center
+    =link_to "<h1>Kao & Gao</h1>".html_safe, page_path('index'), class: "ring-color"
   .row
     .col
     .col.underline
@@ -10,6 +10,6 @@
     .col-4.text-center
       =link_to "Gallery", page_path('gallery'), class: "ring-color"
     .col-4.text-center
-      =link_to "Guest Book", "javascript:;", class: "ring-color"
+      =link_to "Guest Book", page_path('guestbook'), class: "ring-color"
     .col-4.text-center
-      =link_to "RSVP", "javascript:;", class: "ring-color"
+      =link_to "RSVP", page_path('rsvp'), class: "ring-color"
