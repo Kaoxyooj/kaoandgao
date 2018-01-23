@@ -1,9 +1,9 @@
-.d-flex.gallery
+.gallery.d-flex.flex-row
   -img_arr = []
   -img_count = Dir[File.join(Rails.root.join('app/assets/images/gallery'), '**', '*')].count { |file| img_arr << file.to_s.split("/")[-1] ; File.file?(file) }
   -img_arr.each do |img|
     .p-1
-    =image_tag "gallery/#{img}"
+    =image_tag "gallery/#{img}", class: "img-thumbnail"
 
-.love-kc.redmist.text-center
+.love-kc.redmist.text-center.pt-1
   %h5 Courtesy of LoveKC Photograhy
