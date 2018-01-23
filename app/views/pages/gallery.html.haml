@@ -1,0 +1,6 @@
+.d-flex.gallery
+  -img_arr = []
+  -img_count = Dir[File.join(Rails.root.join('app/assets/images/gallery'), '**', '*')].count { |file| img_arr << file.to_s.split("/")[-1] ; File.file?(file) }
+  -img_arr.each do |img|
+    .p-1
+    =image_tag "gallery/#{img}"
