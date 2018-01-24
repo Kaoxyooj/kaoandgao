@@ -1,5 +1,10 @@
-= javascript_include_tag 'dragscroll.js'
 -set_title
+-if request.user_agent =~ /Mobile|webOS/
+  -p "Is Mobile!"
+-else
+  = javascript_include_tag 'dragscroll.js'
+  -p "Is NOT Mobile!"
+
 
 %section.gallery.d-flex.flex-row.dragscroll
   -img_arr = []
