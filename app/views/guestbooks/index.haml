@@ -1,0 +1,11 @@
+-set_title "Guestbook"
+
+%section.guestbook
+  .col-sm-6.offset-sm-3.col-md-6.offset-md-3
+    =simple_form_for @guestbook, remote: true do |f|
+      .form-group
+        =f.input :name, label: false, placeholder: "Name", input_html:{class: "form-control"}
+      .form-group
+        =f.text_area :post, label: false, placeholder: "Sign", class: "form-control"
+      .text-center
+        =f.submit "Post", class: "redmist font-m btn btn-light btn-lg"
