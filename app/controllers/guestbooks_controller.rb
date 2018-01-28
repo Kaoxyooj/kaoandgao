@@ -1,23 +1,16 @@
 class GuestbooksController < ApplicationController
-  before_action :new, only: [:index, :create, :show]
-
-  def show
-  end
 
   def index
+    @guestbook = Guestbook.new()
   end
 
   def create
-    p guestbook_params
-    if @guestbook.save(guestbook_params)
-      p "Saved!"
+    if Guestbook.create(guestbook_params)
+      @flash = "Thanks for signing our guestbook!"
     else
-      p "Error Saving!"
+      Rails.logger.error e.messages
     end
-  end
-
-  def new
-    @guestbook = Guestbook.new()
+    redirect_to guestbooks_path
   end
 
   private
