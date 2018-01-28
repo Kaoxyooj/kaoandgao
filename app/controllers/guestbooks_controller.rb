@@ -1,11 +1,15 @@
 class GuestbooksController < ApplicationController
-  before_action :new, only: [:index, :create]
+  before_action :new, only: [:index, :create, :show]
+
+  def show
+  end
 
   def index
   end
 
   def create
-    if @guestbook.create(guestbook_params)
+    p guestbook_params
+    if @guestbook.save(guestbook_params)
       p "Saved!"
     else
       p "Error Saving!"

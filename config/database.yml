@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   host: 45.55.170.122
-  database: postgres
+  database: deploy
   username: deploy
   password: <%= Rails.application.secrets.pg_pw %>
   encoding: unicode

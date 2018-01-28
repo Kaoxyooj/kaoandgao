@@ -2,7 +2,7 @@
 
 %section.guestbook
   .col-sm-6.offset-sm-3.col-md-6.offset-md-3
-    =simple_form_for @guestbook, remote: true do |f|
+    =simple_form_for @guestbook, method: :post do |f|
       .form-group
         =f.input :name, label: false, placeholder: "Name", input_html:{class: "form-control"}
       .form-group
