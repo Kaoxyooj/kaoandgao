@@ -20,6 +20,7 @@ gem 'simple_form'
 gem 'sprockets-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+gem 'unirest'
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'puma', '~> 3.7'

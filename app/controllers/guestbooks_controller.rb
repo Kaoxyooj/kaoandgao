@@ -1,4 +1,5 @@
 class GuestbooksController < ApplicationController
+  require 'json'
 
   def index
     @guestbook = Guestbook.new()

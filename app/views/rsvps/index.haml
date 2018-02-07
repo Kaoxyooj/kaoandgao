@@ -1,0 +1,11 @@
+-set_title "RSVP"
+
+%section.rsvp
+  .col-sm-6.offset-sm-3.col-md-6.offset-md-3
+    =simple_form_for @rsvp, method: :post do |f|
+      .form-group
+        =f.input :first_name, label: false, placeholder: "First Name", input_html:{class: "form-control"}
+      .form-group
+        =f.input :last_name, label: false, placeholder: "Last Name", input_html:{class: "form-control"}
+      .text-center
+        =f.submit "Find RSVP", class: "redmist font-m btn btn-light btn-lg"

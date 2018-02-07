@@ -2,6 +2,7 @@ Rails.application.routes.draw do
     root to: 'pages#index', id: 'home'
     
     resources :guestbooks, path: :guestbook
+    resources :rsvps, path: :rsvp
 
     get "*id" => 'pages#show', as: :page, format: false
 end
