@@ -33,14 +33,22 @@ section
     height: 100%
 
 .guestbook
-  padding-top: 15vh
+  padding-top: 8vh
   background:
     image: asset-url("gb_img.jpg")
     size: cover
     repeat: no-repeat
     position: center
+
+  a, a:hover
+    font-weight: bold
+    color: white
   textarea
     height: 20vh
+  .nav-tabs
+    border-bottom: 1px solid black
+    .nav-link.active
+      border-color: black black #fff
 
 .rsvp
   padding-top: 15vh
