@@ -18,5 +18,11 @@
     
     .tab-pane.fade#guestbook-book{role: "tabpanel"}
       .col-sm-6.offset-sm-3.col-md-6.offset-md-3
-        %h1 Guestbook Tab 2
+        .card
+          .card-body
+            .col
+              -@book.each do |b|
+                %p=b.post
+                %p.small="- #{b.name}"
+                %hr
 

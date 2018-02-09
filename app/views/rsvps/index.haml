@@ -7,5 +7,24 @@
         =f.input :first_name, label: false, placeholder: "First Name", input_html:{class: "form-control"}
       .form-group
         =f.input :last_name, label: false, placeholder: "Last Name", input_html:{class: "form-control"}
+      .form-group
+        =f.input :street_address, label: false, placeholder: "Street Address", input_html:{class: "form-control"}
+      .form-group
+        =f.input :zipcode, label: false, placeholder: "Zipcode", input_html:{class: "form-control"}
+      .row
+        .col-sm-6.text-center
+          .form-check
+            =f.input_field :ceremony, as: :boolean, label: false, input_html:{class: "form-check-input"}
+            =f.label :ceremony, "Attending Ceremony", class: "form-check-label text-white"
+          .form-check
+            =f.input_field :reception, as: :boolean, label: false, input_html:{class: "form-check-input"}
+            =f.label :reception, "Attending Reception", class: "form-check-label text-white"
+        .col-sm-6.text-center
+          .form-check
+            =f.input_field :both, as: :boolean, label: false, input_html:{class: "form-check-input"}
+            =f.label :both, "Attending Both", class: "form-check-label text-white"
+          .form-check
+            =f.input_field :not_attending, as: :boolean, label: false, input_html:{class: "form-check-input"}
+            =f.label :not_attending, "Can't Attend", class: "form-check-label text-white"
       .text-center
         =f.submit "Find RSVP", class: "redmist font-m btn btn-light btn-lg"

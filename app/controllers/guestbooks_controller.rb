@@ -2,7 +2,8 @@ class GuestbooksController < ApplicationController
   require 'json'
 
   def index
-    @guestbook = Guestbook.new()
+    @guestbook  = Guestbook.new()
+    @book       = Guestbook.all.order("id desc")
   end
 
   def create

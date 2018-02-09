@@ -1,5 +1,5 @@
 section
-  height: 70vh
+  height: 90vh
 
 .font-s
   font-size: 0.8rem !important
@@ -13,11 +13,13 @@ section
 
 .kng a:hover
   color: black
+  text-decoration: unset
 
 #nav-links 
   font-size: 1.5rem
   a:hover
     color: black
+    text-decoration: unset
 
 #s1
   background:
@@ -33,22 +35,27 @@ section
     height: 100%
 
 .guestbook
-  padding-top: 8vh
+  padding-top: 10vh
   background:
     image: asset-url("gb_img.jpg")
     size: cover
     repeat: no-repeat
     position: center
-
   a, a:hover
     font-weight: bold
     color: white
+  input[type="text"]
+    border: 1px solid black
   textarea
     height: 20vh
+    border: 1px solid
   .nav-tabs
     border-bottom: 1px solid black
     .nav-link.active
       border-color: black black #fff
+  .card
+    max-height: 50vh
+    overflow-y: scroll
 
 .rsvp
   padding-top: 15vh
@@ -57,21 +64,5 @@ section
     size: cover
     repeat: no-repeat
     position: center
-  .form-group
-    // max-width: 30vw
 
-
-
-
-// .s1-pad
-//   padding-top: 10vh
-
-// #s2
-//   height: 100vh
-//   background:
-//     color: white
-//     image: asset-url("bg_white.jpg")
-//     size: cover
-//     repeat: no-repeat
-//     position: center
 

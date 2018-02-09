@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201015413) do
+ActiveRecord::Schema.define(version: 20180209063124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20180201015413) do
   create_table "guestbooks", force: :cascade do |t|
     t.string "name"
     t.string "post"
-    t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,9 +25,16 @@ ActiveRecord::Schema.define(version: 20180201015413) do
   create_table "rsvps", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.boolean "check"
+    t.string "street_address"
+    t.string "state"
+    t.string "zipcode"
+    t.boolean "ceremony"
+    t.boolean "reception"
+    t.boolean "both"
+    t.boolean "not_attending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "attendees"
   end
 
 end
