@@ -13,11 +13,11 @@
             =f.input :name, label: false, placeholder: "Name", input_html:{class: "form-control"}
           .form-group
             =f.text_area :post, label: false, placeholder: "Thank you for visiting our guestbook.  We appreaciate each and everyone of you.  Please leave us some words of encouragement.", class: "form-control"
-          .text-center
+          .text-right
             =f.submit "Post", class: "redmist btn btn-light"
     
     .tab-pane.fade#guestbook-book{role: "tabpanel"}
-      .col-sm-6.offset-sm-3.col-md-6.offset-md-3
+      #guestbook-view.col-sm-6.offset-sm-3.col-md-6.offset-md-3
         .card
           .card-body
             .col
