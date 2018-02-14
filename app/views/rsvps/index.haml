@@ -15,33 +15,20 @@
         .col
           =f.input :state, collection: us_states, selected: "", label: false, input_html:{class: "form-control form-control-md"}
       .form-group
-        .py-3
+        .pt-3
           =f.input :zipcode, label: false, placeholder: "Zipcode", input_html:{class: "form-control"}
+      
+      
+      .form-group
+        =f.input :attendees, label: false, placeholder: "Number Attending", input_html:{class: "form-control"}
+        / =f.input_field :ceremony, as: :boolean, label: false, input_html:{class: "form-check-input"}
+        / =f.label :ceremony, "Attending", class: "form-check-label text-white"
+
       .row
-        .col-sm-6
-          .form-check
-            =f.input_field :ceremony, as: :boolean, label: false, input_html:{class: "form-check-input"}
-            =f.label :ceremony, "Attending", class: "form-check-label text-white"
-        .col-sm-6
-          .form-check
-            =f.input_field :not_attending, as: :boolean, label: false, input_html:{class: "form-check-input"}
-            =f.label :not_attending, "Can't Attend", class: "form-check-label text-white"
-        / .col-sm-6
-        /   .form-check
-        /     =f.input_field :both, as: :boolean, label: false, input_html:{class: "form-check-input"}
-        /     =f.label :both, "Attending Both", class: "form-check-label text-white"
-        /   .form-check
-        /     =f.input_field :reception, as: :boolean, label: false, input_html:{class: "form-check-input"}
-        /     =f.label :reception, "Attending Reception", class: "form-check-label text-white"
-
-      / %fieldset.form-group
-      /   .row
-      /     %lengend.col-form-label.col-sm-2.pt-0.text-white Coming?
-      /     .col-sm-10
-      /       .form-check
-      /         =f.input_field :ceremony, as: :boolean, label: false, input_html:{class: "form-check-input"}
-      /         =f.label :ceremony
-
-      .text-right
-        =f.submit "RSVP", class: "redmist btn btn-light"
+        .col-6
+          =f.input_field :not_attending, as: :boolean, label: false, input_html:{class: "form-check-input"}
+          =f.label :not_attending, "Can't attend", class: "font-s form-check-label text-white"
+        .col-6
+          .text-right
+            =f.submit "RSVP", class: "redmist btn btn-light"
 

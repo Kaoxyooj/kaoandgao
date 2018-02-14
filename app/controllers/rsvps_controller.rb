@@ -8,6 +8,7 @@ class RsvpsController < ApplicationController
     if Rsvp.create(rsvp_params)
       @flash = "Thanks for signing our guestbook!"
     else
+      p e.messages
       Rails.logger.error e.messages
     end
     redirect_to rsvps_path
@@ -16,7 +17,7 @@ class RsvpsController < ApplicationController
   private
 
   def rsvp_params
-    params.require(:rsvp).permit(:first_name, :last_name, :check)
+    params.require(:rsvp).permit(:first_name, :last_name, :street_address, :city, :state, :zipcode, :ceremony, :not_attending, :attendees)
   end
 
 end
