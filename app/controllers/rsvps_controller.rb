@@ -15,6 +15,17 @@ class RsvpsController < ApplicationController
     end
   end
 
+  def mgh
+    @rsvps = Rsvp.all.order(:first_name)
+    @total = @rsvps.map(&:attendees).sum
+  end
+
+  def mgh_checklist
+    @rsvp = Rsvp.find(params[:id])
+    @rsvp.update(rsvp_params)
+    @rsvp.save
+  end
+
   private
 
   def rsvp_params

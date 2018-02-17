@@ -4,5 +4,8 @@ Rails.application.routes.draw do
     resources :guestbooks, path: :guestbook
     resources :rsvps, path: :rsvp
 
+    get "mgh", to: "rsvps#mgh", as: "mgh"
+    patch "mgh_checklist", to: "rsvps#mgh_checklist", as: "mgh_checklist"
+
     get "*id" => 'pages#show', as: :page, format: false
 end
