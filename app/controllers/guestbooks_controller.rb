@@ -7,12 +7,13 @@ class GuestbooksController < ApplicationController
   end
 
   def create
-    if Guestbook.create(guestbook_params)
-      @flash = "Thanks for signing our guestbook!"
+    @guestbook = Guestbook.new(guestbook_params)
+    if @guestbook.save
+      redirect_to guestbooks_path, alert: "Thanks for signing our guestbook!"
     else
-      Rails.logger.error e.messages
+      Rails.logger.error @guestbook.errors.messages
+      redirect_to guestbooks_path, alert: "An error occurred, please try again."
     end
-    redirect_to guestbooks_path
   end
 
   private
