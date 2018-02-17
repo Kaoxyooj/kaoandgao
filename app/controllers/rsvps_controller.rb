@@ -5,13 +5,14 @@ class RsvpsController < ApplicationController
   end
 
   def create
-    if Rsvp.create(rsvp_params)
+    @rsvp = Rsvp.new(rsvp_params)
+    if @rsvp.save
       @flash = "Thanks for signing our guestbook!"
+      redirect_to rsvps_path, alert: "Thanks!"
     else
-      p e.messages
-      Rails.logger.error e.messages
+      Rails.logger.error @rsvp.errors.messages
+      redirect_to rsvps_path, alert: "An error occurred, please try again."
     end
-    redirect_to rsvps_path
   end
 
   private

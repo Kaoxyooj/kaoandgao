@@ -9,7 +9,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'load'
   %body
     .wrapper
-      <!-- = render 'flash' -->
       =render "application/header"
+      =render "application/flash"
       = yield
       =render "application/footer"

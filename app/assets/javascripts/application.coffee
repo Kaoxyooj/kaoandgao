@@ -5,7 +5,7 @@
 #= require turbolinks
 #= require_tree .
 
-# $(document).on "turbolinks:load", ->
+$(document).on "turbolinks:load", ->
 
     
 
