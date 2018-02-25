@@ -16,6 +16,9 @@ class RsvpsController < ApplicationController
   end
 
   def mgh
+    check_password
+    cookies.signed[:pw_true] = true if @checker == @pw
+    return redirect_to check_password_path if cookies.signed[:pw_true].blank?
     @rsvps = Rsvp.all.order(:first_name)
     @total = @rsvps.map(&:attendees).sum
   end
@@ -27,6 +30,12 @@ class RsvpsController < ApplicationController
   end
 
   private
+
+  def check_password
+    @pw ||= params[:password]
+    @check = Password.find(1).digest
+    @checker = BCrypt::Password.new(@check)
+  end
 
   def rsvp_params
     params.require(:rsvp).permit(:first_name, :last_name, :street_address, :city, :state, :zipcode, :ceremony, :not_attending, :attendees)
