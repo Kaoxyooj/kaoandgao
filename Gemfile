@@ -7,6 +7,7 @@ source 'https://rubygems.org'
 
 
 gem "haml-rails"
+gem 'bcrypt'
 gem 'bootstrap'
 gem 'coffee-rails'
 gem 'high_voltage', '~> 3.0.0'
