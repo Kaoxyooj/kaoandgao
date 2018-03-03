@@ -8,7 +8,7 @@ class RsvpsController < ApplicationController
     @rsvp = Rsvp.new(rsvp_params)
     if @rsvp.save
       @flash = "Thanks for signing our guestbook!"
-      redirect_to rsvps_path, alert: "Thanks!"
+      redirect_to rsvps_path, alert: "Thank You, RSVP submitted successfully!"
     else
       Rails.logger.error @rsvp.errors.messages
       redirect_to rsvps_path, alert: "An error occurred, please try again."
